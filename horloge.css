@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  font-size: 3.5rem;
+  border: 5px solid black;
+  border-radius: 50%;
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+
+  position: relative;
+}
+
+.container .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+
+.container .number1 {
+  --rotation: 30deg;
+}
+.container .number2 {
+  --rotation: 60deg;
+}
+.container .number3 {
+  --rotation: 90deg;
+}
+.container .number4 {
+  --rotation: 120deg;
+}
+.container .number5 {
+  --rotation: 150deg;
+}
+.container .number6 {
+  --rotation: 180deg;
+}
+.container .number7 {
+  --rotation: 210deg;
+}
+.container .number8 {
+  --rotation: 240deg;
+}
+.container .number9 {
+  --rotation: 270deg;
+}
+.container .number10 {
+  --rotation: 300deg;
+}
+.container .number11 {
+  --rotation: 330deg;
+}
+
+.container .aiguille {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 10px;
+  height: 50%;
+  border: 1px solid white;
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation)));
+}
+
+.container .aiguille.sec {
+  width: 5px;
+  height: 45%;
+  background: red;
+}
+
+.container .aiguille.min {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+.container .aiguille.hr {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
